@@ -1,0 +1,108 @@
+	Calcul en utilisant boucle switch :
+#include <stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    double n,m;
+    char op;
+    printf("donner la valeur de n :");
+    scanf("%lf", &n);
+    printf("opération :");
+    scanf("%s", &op);
+    printf("donner la valeur de m :");
+    scanf("%lf", &m);
+    switch(op){
+        case '+':
+            printf("%f", n + m);
+        break;
+        case '-':
+            printf("%f", n - m);
+        break;
+        case '*':
+            printf("%f", n * m);
+        break;
+        case '/':
+            if (m != 0 ){
+                printf("%f", n / m);  
+            }else 
+                printf("imposs!!");
+            
+        break;
+        default :
+            printf("ERROR");
+    }
+    return 0;
+}
+	Calcul avec boucle if :
+
+#include <stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    double n,m;
+    char op;
+    printf("donner la valeur de n :");
+    scanf("%lf", &n);
+    printf("opération :");
+    scanf("%s", &op);
+    printf("donner la valeur de m :");
+    scanf("%lf", &m);
+    if(op == '+'){
+        printf("%0.2f", n + m);
+    }else if(op == '-'){
+        printf("%0.2f", n - m);
+    }else if(op == '*'){
+        printf("%0.2f", n * m);
+    }else if(op == '/'){
+        printf("%0.2f", n / m);
+    }else 
+        printf("ERROR");
+    return 0;
+}
+	Calcul avec les fonctions :
+#include <stdio.h>
+#include<stdlib.h>
+float som(int a, int b){
+    float resultat ;
+    resultat = a + b;
+    return resultat;
+}
+float dif(int a, int b){
+    float resultat;
+    resultat = a - b;
+    return resultat;
+}
+float pro(int a, int b){
+    float resultat;
+    resultat = a * b;
+    return resultat;
+}
+float divi(int a, int b){
+    float resultat;
+    resultat = a / b;
+    return resultat ;
+}
+int main()
+{
+    double n,m;
+    char op;
+    printf("donner la valeur de n :");
+    scanf("%lf", &n);
+    printf("opération :");
+    scanf("%s", &op);
+    printf("donner la valeur de m :");
+    scanf("%lf", &m);
+    if(op == '+'){
+        printf("%0.2f", som(n,m));
+    }else if(op == '-'){
+        printf("%0.2f", dif(n,m));
+    }else if(op == '*'){
+        printf("%0.2f", pro(n,m));
+    }else if(op == '/'){
+        printf("%0.2f", divi(n,m));
+    }else 
+        printf("ERROR");
+    return 0;
+}
