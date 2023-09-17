@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+   double num1,num2;
+char op,q;
+printf("donner le premier nombre :");
+scanf("%lf", &num1);
+while(op != 'q'){
+	printf("\noperation :");
+	scanf("%s", &op);
+	printf("donner le deuxiéme nombre :");
+	scanf("%lf", &num2);
+switch (op){
+    case '+':
+    printf("%0.2f\n",num1 + num2);
+    break;
+    case '-' :
+    printf("%0.2f\n", num1 - num2);
+    break;
+    case '*' :
+    printf("%0.2f", num1*num2);
+    break;
+    case '/' :
+    	if(num2 != 0)
+    	printf("%0.2f\n", num1 / num2);
+    	else printf("IMPOSSIBLE");
+    break;
+    default :
+    printf("ERROR");
+}
+}
+    return 0;
+}
+
